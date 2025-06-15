@@ -247,6 +247,7 @@ nav {
 
 .image-container {
     display: flex;
+    width: 100%;
     align-items: center;
 }
 
