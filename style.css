@@ -11,15 +11,16 @@
     --primaryShaded: #00312E;
     --primaryTint: #7FB0AD;
     --secondaryColor: #5a2c80;
-    --secondaryShaded: #2D1640;
+    --secondaryShaded: #574466;
     --secondaryTint: #EEE9F2;
-    --pink: #FFF7F1;
     --tertiaryColor: #335e91;
     --tertiaryShaded: #284B74;
     --tertiaryTint: #D6DEE9;
     --textColor: #000000;
     --white: #ffffff;
+    --pink: #FFF7F1;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+    --multiShadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
     /* Typography */
     --headings-text-size-lg: clamp(2rem, 6vw, 4rem);
     --headings-text-size-md: clamp(1.75rem, 4vw, 3.25rem);
@@ -41,7 +42,7 @@ html {
 }
 
 body {
-    padding-top: var(--navHeight);
+    padding-top: var(--navHeight, 70px);
 }
 
 /* General styles */
@@ -145,7 +146,6 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
 }
 
 .logo>a {
@@ -183,14 +183,13 @@ nav {
 }
 
 /* Call to Action */
-
 .cta {
     border: 2px solid var(--primaryColor);
     padding: 0.5rem 1.25rem;
     font-size: var(--body-text-size);
     font-family: var(--body-font);
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 25px;
     text-align: center;
     color: var(--textColor);
 }
@@ -258,27 +257,38 @@ nav {
     text-align: center;
 }
 
+#features h2,
+#features p {
+    text-align: center;
+}
+
+.card h3 {
+    border-block-end: 3px solid var(--tertiaryColor);
+    padding: 1rem 1.5rem;
+}
+
 .wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 6rem;
     margin: 2rem 0;
     padding: 1rem;
 }
 
 .card {
     max-width: 400px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
-    padding: 1.5rem 1rem;
-    border-radius: 14px;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.5rem;
+    border-radius: 25px;
     box-shadow: var(--shadow);
     text-align: center;
-    position: relative;
-    top: -5px;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -289,34 +299,43 @@ nav {
 }
 
 /* Pricing section */
-#pricing>h2 {
-    align-self: flex-start;
-    margin-bottom: 2rem;
+#pricing{
+    background-color: var(--pink);
+}
+#pricing > p{
+    font-weight: bold;
 }
 
-/*! sistemare per visualizzaione mobile */
-.wrapper.plans {
-    justify-content: space-between;
-    flex-wrap: nowrap;
+#pricing>h2 {
+    align-self: flex-start;
+}
+
+.card.plan h3 {
+    border-block-end: 3px solid var(--white);
+    padding: 1rem 0rem;
 }
 
 .card.plan {
+    max-width: 600px;
+    min-height: 600px;
     align-items: start;
     text-align: left;
     padding: 0;
     gap: 0;
     transform: translateY(10px);
-    box-shadow: -20px -20px 3px var(--secondaryTint);
+    box-shadow: var(--multiShadow);
     border: 1px solid var(--textColor);
-    margin-bottom: auto;
+    background-color: var(--white);
 }
 
 .plan_cost {
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    background-color: var(--primaryColor);
+    max-height: 280px;
+    background-color: var(--secondaryColor);
     color: var(--white);
-    border-radius: 14px 14px 0px 0px;
+    border-radius: 25px 25px 0px 0px;
     flex-direction: column;
     padding: 1.5rem;
 }
@@ -329,13 +348,22 @@ nav {
 
 .payment>p {
     font-size: var(--headings-text-size-lg);
+    font-weight: bold;
 }
 
 .plan_desc {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 1rem;
     padding: 1.5rem;
+}
+
+.plan_desc>ul>li {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 1rem 0;
 }
 
 .plan_desc>ul>li {
@@ -349,6 +377,15 @@ nav {
     display: block;
 }
 
+.plan_desc > span > a.cta.purchase{
+    border-color: var(--secondaryShaded);
+    background-color: var(--secondaryShaded);
+    color: var(--white);
+}
+.plan_desc > span > a.cta.purchase:hover{
+    background-color: transparent;
+    color: var(--textColor);
+}
 
 /* media queries */
 
