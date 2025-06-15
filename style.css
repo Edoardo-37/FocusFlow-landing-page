@@ -236,13 +236,14 @@ nav {
 }
 
 .text-container .cta.hero {
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--textColor);
     border: 2px solid var(--white);
 }
 
 .cta.hero:hover {
-    background-color: var(--white);
-    color: var(--textColor);
+    background-color: transparent;
+    color: var(--white);
 }
 
 .image-container {
