@@ -189,7 +189,6 @@ nav {
 
 /* Call to Action */
 .cta {
-    border: 2px solid var(--primaryColor);
     padding: 0.5rem 1.25rem;
     font-size: var(--body-text-size);
     font-family: var(--body-font);
@@ -201,11 +200,16 @@ nav {
 
 .cta.navbar {
     display: none;
+    background-color: var(--white);
+    border: 3px solid var(--primaryColor);
+    box-shadow: 0 5px 0 var(--primaryColor);
 }
 
 .cta:hover {
     background-color: var(--primaryColor);
     color: var(--white);
+    box-shadow: 0 0 0 transparent;
+
 }
 
 .cta:active {
@@ -243,7 +247,7 @@ nav {
 .text-container .cta.hero {
     background-color: var(--white);
     color: var(--textColor);
-    border: 2px solid var(--white);
+    border: 3px solid var(--white);
 }
 
 .cta.hero:hover {
@@ -303,7 +307,6 @@ nav {
     background-color: var(--pink);
     gap: 0;
 }
-
 
 .plan h3 {
     border-block-end: 3px solid var(--white);
@@ -366,19 +369,18 @@ nav {
     margin: 1rem 0;
 }
 
-.plan_desc>span>.cta {
+.plan_desc .cta.purchase {
     display: block;
-}
-
-.plan_desc>span>a.cta.purchase {
-    border-color: var(--secondaryColor);
-    background-color: transparent;
+    background-color: var(--white);
     color: var(--textColor);
+    border: 3px solid var(--secondaryColor);
+    box-shadow: 0 5px 0 var(--secondaryColor);
 }
 
-.plan_desc>span>a.cta.purchase:hover {
+.plan_desc .cta.purchase:hover {
     background-color: var(--secondaryColor);
     color: var(--white);
+    box-shadow: 0 0 0 transparent;
 }
 
 /* FAQ section */
@@ -418,7 +420,7 @@ nav {
         display: flex;
     }
 
-    /* pricing section */
+    /* Features and Pricing section */
     .wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
