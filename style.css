@@ -133,6 +133,7 @@ section {
 }
 
 /* Header */
+
 nav {
     display: flex;
     justify-content: center;
@@ -213,6 +214,7 @@ nav {
 }
 
 /* hero section */
+
 #hero {
     background-color: var(--primaryColor);
     color: var(--white);
@@ -256,13 +258,10 @@ nav {
 }
 
 /* features section */
-#features>h2,
-#features>p {
-    text-align: center;
-}
 
-#features h2,
-#features p {
+#features>h2,
+#features>p,
+#pricing>h2 {
     text-align: center;
 }
 
@@ -272,10 +271,9 @@ nav {
 }
 
 .wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
     margin: 2rem 0;
 }
 
@@ -300,33 +298,33 @@ nav {
 }
 
 /* Pricing section */
+
 #pricing {
     background-color: var(--pink);
     gap: 0;
 }
 
 
-
-
-.card.plan h3 {
+.plan h3 {
     border-block-end: 3px solid var(--white);
     padding: 1rem 0rem;
 }
 
-.card.plan {
+.plan {
     max-width: 100%;
-    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: start;
     text-align: left;
-    padding: 0;
+    border-radius: 30px;
     gap: 0;
-    transform: translateY(10px);
     box-shadow: var(--multiShadow);
-    border: 1px solid var(--textColor);
+    border: 3px solid var(--secondaryColor);
     background-color: var(--white);
 }
 
-.card.plan > p {
+.plan>p {
     font-weight: bold;
 }
 
@@ -383,6 +381,8 @@ nav {
     color: var(--white);
 }
 
+/* FAQ section */
+
 /* media queries */
 
 @media (min-width: 768px) {
@@ -417,25 +417,15 @@ nav {
     .nav-links {
         display: flex;
     }
-    
+
     /* pricing section */
-    .plans.wrapper {
+    .wrapper {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        column-gap: 2.5rem;
-        row-gap: 3rem;
-    }
-    
-    .card.plan:nth-child(1) {
-        grid-column: 1 / span 4;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
     }
 
-    .card.plan:nth-child(2) {
+    .plan:nth-child(1) {
         grid-column: 1 / span 2;
-    }
-
-    .card.plan:nth-child(3) {
-        grid-column: 3 / span 2;
     }
 }
