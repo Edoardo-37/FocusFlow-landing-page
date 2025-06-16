@@ -9,9 +9,7 @@
     /* colors */
     --primaryColor: #00635d;
     --primaryShaded: #00312E;
-    --primaryTint: #7FB0AD;
     --secondaryColor: #5a2c80;
-    --secondaryShaded: #574466;
     --secondaryTint: #EEE9F2;
     --tertiaryColor: #335e91;
     --tertiaryShaded: #284B74;
@@ -20,7 +18,11 @@
     --white: #ffffff;
     --pink: #FFF7F1;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
-    --multiShadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    --multiShadow: rgba(240, 46, 170, 0.4) -5px 5px,
+        rgba(240, 46, 170, 0.3) -10px 10px,
+        rgba(240, 46, 170, 0.2) -15px 15px,
+        rgba(240, 46, 170, 0.1) -20px 20px,
+        rgba(240, 46, 170, 0.05) -25px 25px;
     /* Typography */
     --headings-text-size-lg: clamp(2rem, 6vw, 4rem);
     --headings-text-size-md: clamp(1.75rem, 4vw, 3.25rem);
@@ -58,6 +60,7 @@ h6 {
 
 h2 {
     font-size: var(--headings-text-size-md);
+    margin-bottom: 2rem;
 }
 
 h3,
@@ -107,6 +110,7 @@ a:active {
 }
 
 section {
+    height: 100%;
     padding-block: 3rem;
     padding-inline: 1.5rem;
     display: flex;
@@ -264,22 +268,19 @@ nav {
 
 .card h3 {
     border-block-end: 3px solid var(--tertiaryColor);
-    padding: 1rem 1.5rem;
+    padding: 1rem 0;
 }
 
 .wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 6rem;
     margin: 2rem 0;
-    padding: 1rem;
 }
 
 .card {
-    max-width: 400px;
-    min-height: 400px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -299,16 +300,13 @@ nav {
 }
 
 /* Pricing section */
-#pricing{
+#pricing {
     background-color: var(--pink);
-}
-#pricing > p{
-    font-weight: bold;
+    gap: 0;
 }
 
-#pricing>h2 {
-    align-self: flex-start;
-}
+
+
 
 .card.plan h3 {
     border-block-end: 3px solid var(--white);
@@ -316,7 +314,7 @@ nav {
 }
 
 .card.plan {
-    max-width: 600px;
+    max-width: 100%;
     min-height: 600px;
     align-items: start;
     text-align: left;
@@ -326,6 +324,10 @@ nav {
     box-shadow: var(--multiShadow);
     border: 1px solid var(--textColor);
     background-color: var(--white);
+}
+
+.card.plan > p {
+    font-weight: bold;
 }
 
 .plan_cost {
@@ -366,25 +368,19 @@ nav {
     margin: 1rem 0;
 }
 
-.plan_desc>ul>li {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    margin: 1rem 0;
-}
-
 .plan_desc>span>.cta {
     display: block;
 }
 
-.plan_desc > span > a.cta.purchase{
-    border-color: var(--secondaryShaded);
-    background-color: var(--secondaryShaded);
-    color: var(--white);
-}
-.plan_desc > span > a.cta.purchase:hover{
+.plan_desc>span>a.cta.purchase {
+    border-color: var(--secondaryColor);
     background-color: transparent;
     color: var(--textColor);
+}
+
+.plan_desc>span>a.cta.purchase:hover {
+    background-color: var(--secondaryColor);
+    color: var(--white);
 }
 
 /* media queries */
@@ -420,5 +416,26 @@ nav {
 @media (min-width: 992px) {
     .nav-links {
         display: flex;
+    }
+    
+    /* pricing section */
+    .plans.wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 2.5rem;
+        row-gap: 3rem;
+    }
+    
+    .card.plan:nth-child(1) {
+        grid-column: 1 / span 4;
+    }
+
+    .card.plan:nth-child(2) {
+        grid-column: 1 / span 2;
+    }
+
+    .card.plan:nth-child(3) {
+        grid-column: 3 / span 2;
     }
 }
