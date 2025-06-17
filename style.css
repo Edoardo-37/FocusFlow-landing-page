@@ -13,7 +13,7 @@
     --secondaryTint: #EEE9F2;
     --tertiaryColor: #335e91;
     --tertiaryShaded: #284B74;
-    --tertiaryTint: #D6DEE9;
+    --tertiaryTint: #EAEEF3;
     --textColor: #000000;
     --white: #ffffff;
     --pink: #FFF7F1;
@@ -24,7 +24,7 @@
     /* Typography */
     --headings-text-size-lg: clamp(2rem, 6vw, 4rem);
     --headings-text-size-md: clamp(1.75rem, 4vw, 3.25rem);
-    --headings-text-size-sm: clamp(1.5rem, 3.5vw, 2.5rem);
+    --headings-text-size-sm: clamp(1.5rem, 3.5vw, 2rem);
     --body-text-size: clamp(1.125rem, 1.5vw, 1.25rem);
     --headings-font: 'Spectral', sans-serif;
     --body-font: 'Karla', sans-serif;
@@ -61,8 +61,7 @@ h2 {
     margin-bottom: 2rem;
 }
 
-h3,
-h4 {
+h3{
     font-size: var(--headings-text-size-sm);
 }
 
@@ -355,7 +354,7 @@ nav {
     gap: 1rem;
     padding: 1.5rem;
     background-color: var(--white);
-    border-radius: inherit;
+    border-radius: 0px 0px 25px 25px;
 }
 
 .plan_desc>ul>li {
@@ -380,6 +379,64 @@ nav {
 }
 
 /* FAQ section */
+#FAQ{
+    background-color: var(--tertiaryTint);
+    gap: 2rem;
+    align-items: normal;
+}
+
+.faq-item{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+}
+
+.faq-question{
+    appearance: none;
+    border: none;
+    background-color: var(--white);
+    color: var(--tertiaryShaded);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+.faq-question:hover,
+.faq-question.active{
+    background-color: var(--tertiaryColor);
+    color: var(--white);
+}
+
+.faq-question p{
+    font-weight: bold;
+}
+
+.faq-question .arrow{
+    transition: transform 0.3s ease;
+}
+
+.faq-question .arrow.rotated{
+    transform: rotateX(180deg);
+}
+
+.faq-answer{
+    overflow: hidden;
+    max-height: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.faq-answer.open{
+    background-color: var(--white);
+    padding: 1rem 1.25rem;
+    display: block;
+    max-height: 400px;
+}
 
 /* media queries */
 
