@@ -133,7 +133,6 @@ section {
 }
 
 /* Header */
-
 nav {
     display: flex;
     align-items: center;
@@ -214,8 +213,7 @@ nav {
     color: var(--white);
 }
 
-/* hero section */
-
+/* --- hero section --- */
 #hero {
     background-color: var(--primaryColor);
     color: var(--white);
@@ -259,8 +257,10 @@ nav {
     align-items: center;
 }
 
-/* features section */
-
+/* --- features section --- */
+#features{
+    background-color: #f7f4fb;
+}
 #features>h2,
 #features>p,
 #pricing>h2 {
@@ -299,8 +299,7 @@ nav {
     border: 1px solid var(--tertiaryShaded);
 }
 
-/* Pricing section */
-
+/* --- Pricing section --- */
 #pricing {
     background-color: var(--pink);
     gap: 0;
@@ -382,7 +381,7 @@ nav {
     box-shadow: 0 0 0 transparent;
 }
 
-/* FAQ section */
+/* --- FAQ section --- */
 #FAQ{
     background-color: var(--tertiaryTint);
 }
@@ -459,6 +458,11 @@ nav {
     padding: 1rem 1.25rem;
     display: block;
     height: auto;
+}
+
+/* --- Footer illustration section --- */
+.footer-illustration{
+    padding: 0;
 }
 
 /* media queries */
