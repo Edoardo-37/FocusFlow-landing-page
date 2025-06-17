@@ -385,11 +385,25 @@ nav {
 /* FAQ section */
 #FAQ{
     background-color: var(--tertiaryTint);
-    gap: 2rem;
-    align-items: normal;
 }
 
-/* accordion */
+#FAQ > h2{
+    margin-bottom: 0;
+}
+
+#FAQ > p{
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.accordion-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* accordion item */
 .faq-item{
     display: flex;
     flex-direction: column;
@@ -433,16 +447,18 @@ nav {
 /* accordion content */
 .faq-answer{
     overflow: hidden;
-    max-height: 0;
+    height: 0;
     transform: translateY(-5px);
     transition: all 0.3s ease;
 }
 
 .faq-answer.open{
     background-color: var(--white);
+    color: #525252;
+    font-weight: 600;
     padding: 1rem 1.25rem;
     display: block;
-    max-height: 400px;
+    height: auto;
 }
 
 /* media queries */
