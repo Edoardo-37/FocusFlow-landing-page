@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+*:focus-visible{
+    outline: 5px solid #f1e977;
+}
+
 /* Variables */
 :root {
     /* colors */
@@ -385,14 +389,15 @@ nav {
     align-items: normal;
 }
 
+/* accordion */
 .faq-item{
     display: flex;
     flex-direction: column;
     max-width: 800px;
 }
 
+/* accordion title */
 .faq-question{
-    appearance: none;
     border: none;
     background-color: var(--white);
     color: var(--tertiaryShaded);
@@ -416,6 +421,7 @@ nav {
     font-weight: bold;
 }
 
+/* arrow icon */
 .faq-question .arrow{
     transition: transform 0.3s ease;
 }
@@ -424,6 +430,7 @@ nav {
     transform: rotateX(180deg);
 }
 
+/* accordion content */
 .faq-answer{
     overflow: hidden;
     max-height: 0;
