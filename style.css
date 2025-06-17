@@ -315,11 +315,10 @@ nav {
     justify-content: space-between;
     align-items: start;
     text-align: left;
-    border-radius: 30px;
+    border-radius: 25px;
     gap: 0;
     box-shadow: var(--multiShadow);
     border: 3px solid var(--secondaryColor);
-    background-color: var(--white);
 }
 
 .plan>p {
@@ -333,7 +332,7 @@ nav {
     max-height: 280px;
     background-color: var(--secondaryColor);
     color: var(--white);
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
     flex-direction: column;
     padding: 1.5rem;
 }
@@ -355,6 +354,8 @@ nav {
     width: 100%;
     gap: 1rem;
     padding: 1.5rem;
+    background-color: var(--white);
+    border-radius: inherit;
 }
 
 .plan_desc>ul>li {
