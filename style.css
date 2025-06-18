@@ -117,7 +117,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
 /* Text Selection Color */
@@ -236,10 +235,6 @@ nav {
     font-size: var(--headings-text-size-lg);
 }
 
-.text-container span {
-    display: block;
-}
-
 .text-container .cta.hero {
     background-color: var(--white);
     color: var(--textColor);
@@ -348,7 +343,6 @@ nav {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    display: block;
     margin: 0 auto;
     border: 3px solid var(--yellowShaded);
 }
@@ -372,10 +366,6 @@ nav {
 }
 
 /* --- Pricing section --- */
-#pricing {
-    gap: 0;
-}
-
 .plan h3 {
     border-block-end: 3px solid var(--white);
     padding: 1rem 0rem;
@@ -438,15 +428,14 @@ nav {
     margin: 1rem 0;
 }
 
-.plan_desc .cta.purchase {
-    display: block;
+.plan_desc .cta.purchase{
     background-color: var(--white);
     color: var(--textColor);
     border: 3px solid var(--secondaryColor);
     box-shadow: 0 5px 0 var(--secondaryColor);
 }
 
-.plan_desc .cta.purchase:hover {
+.plan_desc .cta.purchase:hover{
     background-color: var(--secondaryColor);
     color: var(--white);
     box-shadow: 0 0 0 transparent;
@@ -464,6 +453,7 @@ nav {
 #FAQ>p {
     margin: 1rem 0;
     font-weight: bold;
+    text-align: center;
 }
 
 .accordion-wrapper {
@@ -528,7 +518,6 @@ nav {
     color: var(--gray);
     font-weight: 600;
     padding: 1rem 1.25rem;
-    display: block;
     height: auto;
 }
 
