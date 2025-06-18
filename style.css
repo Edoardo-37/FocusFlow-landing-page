@@ -344,7 +344,7 @@ nav {
     margin-bottom: auto;
 }
 
-.testimonial-card img{
+.testimonial-card img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -532,9 +532,65 @@ nav {
     height: auto;
 }
 
-/* --- Footer illustration section --- */
-.footer-illustration {
-    padding: 0;
+/* --- Footer illustration --- */
+.footer-illustration>img {
+    aspect-ratio: 16 / 9;
+    transform: translateY(50px);
+}
+
+/* --- Footer  --- */
+footer {
+    background-color: var(--primaryColor);
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.links-container>.logo>a,
+.footer-links>h4,
+.footer-links>li>a,
+footer>p {
+    color: var(--white)
+}
+
+.links-container>.logo {
+    margin-top: 3rem;
+}
+.links-container>.logo>img {
+    background-color: var(--white);
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    margin-left: 1.5rem;
+    margin-right: 0.75rem;
+    padding: 0.5rem
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-left: 2rem;
+}
+
+.footer-links>h4 {
+    margin-block: 1rem;
+    letter-spacing: 0.10rem;
+}
+
+.footer-links>li>a {
+    margin-block: 1rem;
+    letter-spacing: 0.03rem;
+}
+
+footer>p {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem 2rem;
 }
 
 /* media queries */
@@ -569,6 +625,12 @@ nav {
     /* testimonials section */
     .testimonial-info>span:nth-child(1) {
         font-size: 24px;
+    }
+
+    /* footer */
+    .links-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
