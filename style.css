@@ -305,9 +305,7 @@ nav {
     margin: 1rem 0;
     text-align: center;
     padding-bottom: 1rem;
-    letter-spacing: 5px;
     border-bottom: 3px solid var(--textColor);
-    grid-column: 1 / span 2;
 }
 
 .testimonial-wrapper {
