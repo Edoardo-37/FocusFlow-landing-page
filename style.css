@@ -428,14 +428,16 @@ nav {
     margin: 1rem 0;
 }
 
-.plan_desc .cta.purchase{
+.plan_desc .cta.purchase,
+.reinforcement.cta {
     background-color: var(--white);
     color: var(--textColor);
     border: 3px solid var(--secondaryColor);
     box-shadow: 0 5px 0 var(--secondaryColor);
 }
 
-.plan_desc .cta.purchase:hover{
+.plan_desc .cta.purchase:hover,
+.reinforcement.cta:hover {
     background-color: var(--secondaryColor);
     color: var(--white);
     box-shadow: 0 0 0 transparent;
@@ -519,6 +521,22 @@ nav {
     font-weight: 600;
     padding: 1rem 1.25rem;
     height: auto;
+}
+
+/* cta reinforcement */
+.final-funnel {
+    max-width: 100%;
+    margin-top: 6rem;
+    margin-inline: 3rem;
+    padding: 1.5rem 3rem;
+    gap: 1rem;
+    border: 3px solid var(--secondaryColor);
+    border-radius: 14px;
+    box-shadow: var(--multiShadow);
+}
+
+.final-funnel > h2{
+    text-align: center;
 }
 
 /* --- Footer illustration --- */
