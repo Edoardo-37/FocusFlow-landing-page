@@ -254,9 +254,13 @@ nav {
 
 /* --- features section --- */
 #features>h2,
+#features>h3,
 #features>p,
 #pricing>h2 {
     text-align: center;
+}
+#features>h3{
+    margin: 4rem 0 1rem 0;
 }
 
 .card h3 {
