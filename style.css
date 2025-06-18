@@ -259,7 +259,8 @@ nav {
 #pricing>h2 {
     text-align: center;
 }
-#features>h3{
+
+#features>h3 {
     margin: 4rem 0 1rem 0;
 }
 
@@ -525,7 +526,7 @@ nav {
     height: auto;
 }
 
-/* cta reinforcement */
+/* --- final funnel --- */
 .final-funnel {
     max-width: 100%;
     margin-top: 6rem;
@@ -537,7 +538,7 @@ nav {
     box-shadow: var(--multiShadow);
 }
 
-.final-funnel > h2{
+.final-funnel>h2 {
     text-align: center;
 }
 
@@ -568,6 +569,7 @@ footer>p {
 .links-container>.logo {
     margin-top: 3rem;
 }
+
 .links-container>.logo>img {
     background-color: var(--white);
     width: 100px;
@@ -636,8 +638,13 @@ footer>p {
         font-size: 24px;
     }
 
+    /* --- final funnel --- */
+    .final-funnel {
+        display: none;
+    }
+
     /* footer */
-    .links-container{
+    .links-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
