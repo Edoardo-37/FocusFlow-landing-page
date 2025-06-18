@@ -585,12 +585,12 @@ footer>p {
     grid-template-columns: 1fr;
     justify-content: space-between;
     gap: 0.5rem;
-    margin-left: 2rem;
+    margin: 2rem 0 0 2rem;
 }
 
 .footer-links>h4 {
     margin-block: 1rem;
-    letter-spacing: 0.10rem;
+    letter-spacing: 0.04rem;
 }
 
 .footer-links>li>a {
@@ -601,7 +601,7 @@ footer>p {
 footer>p {
     text-align: center;
     margin-top: 2rem;
-    padding: 1.5rem 2rem;
+    padding-block: 1.5rem;
 }
 
 /* media queries */
