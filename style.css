@@ -625,11 +625,6 @@ nav.mobile .hamburger-toggle span:nth-child(3) {
     text-align: center;
 }
 
-/* --- Footer illustration --- */
-.footer-illustration>img {
-    aspect-ratio: 16 / 9;
-}
-
 /* --- Footer  --- */
 footer {
     background-color: var(--primaryColor);
