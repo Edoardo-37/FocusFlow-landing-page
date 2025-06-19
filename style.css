@@ -147,14 +147,14 @@ nav {
 
 .logo {
     display: flex;
+    gap: 0.5rem;
     align-items: center;
 }
 
 .logo>img {
     width: 60px;
-    height: 40px;
-    height: auto;
-    object-fit: contain;
+    height: 60px;
+    object-fit: cover;
 }
 
 .logo>a {
