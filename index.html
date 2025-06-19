@@ -28,7 +28,7 @@
 <body>
     <!-- Header -->
     <header>
-        <nav>
+        <nav role="navigation" aria-label="Menu principale di navigazione">
             <div class="logo">
                 <img loading="lazy" width="60px" height="60px" src="assets/logo.png" alt="Logo applicazione"
                     title="logo applicazione" />
@@ -40,8 +40,9 @@
                 <li><a href="#testimonials">Feedback</a></li>
                 <li><a href="#FAQ">FAQ</a></li>
             </ul>
-            <a class="cta navbar" href="#pricing">Ottieni FocusFlow</a>
-            <button class="hamburger-toggle" aria-label="Apri menu" aria-controls="nav-links">
+            <a class="cta navbar" href="#pricing" title="Vai ai piani di acquisto">Ottieni FocusFlow</a>
+            <button class="hamburger-toggle" aria-label="Apri menu di navigazione" aria-controls="nav-links"
+            aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -50,14 +51,14 @@
     </header>
     <main>
         <!-- hero section -->
-        <section id="hero">
+        <section id="hero" aria-labelledby="hero-heading">
             <div class="text-container">
-                <h1>Resta Concentrato. Lavora al meglio. Vivi con più tempo libero.</h1>
+                <h1 id="hero-heading">Resta Concentrato. Lavora al meglio. Vivi con più tempo libero.</h1>
                 <p>
                     FocusFlow aiuta a gestire le tue giornate e il tuo carico di lavoro al meglio con strumenti semplici
                     ed efficaci in un'unica applicazione.
                 </p>
-                <a class="cta hero" href="#pricing">Ottieni FocusFlow</a>
+                <a aria-hidden="true" class="cta hero" href="#pricing" title="Vai ai piani di acquisto">Ottieni FocusFlow</a>
             </div>
             <div class="image-container">
                 <img loading="lazy" src="assets/svg/hero-illustration.svg" alt="hero-illustration"
@@ -66,8 +67,8 @@
         </section>
 
         <!-- features section -->
-        <section id="features">
-            <h2>Semplifica, concentrati, raggiungi i tuoi obiettivi</h2>
+        <section id="features" aria-labelledby="features-heading">
+            <h2 id="features-heading">Semplifica, concentrati, raggiungi i tuoi obiettivi</h2>
             <p>
                 FocusFlow non è solo un to-do-list manager, è il tuo miglior compagno di lavoro che <u>racchiude in
                     un'unica
@@ -131,8 +132,8 @@
         </section>
 
         <!-- testimonials section -->
-        <section id="testimonials">
-            <h2>Cosa dicono i nostri clienti</h2>
+        <section id="testimonials" aria-labelledby="testimonials-heading">
+            <h2 id="testimonials-heading">Cosa dicono i nostri clienti</h2>
             <div class="testimonial-wrapper">
                 <div class="testimonial-card">
                     <p class="quote-icon">&#10077;</p>
@@ -198,8 +199,8 @@
         </section>
 
         <!-- pricing section -->
-        <section id="pricing">
-            <h2>Scegli il piano che preferisci</h2>
+        <section id="pricing" aria-labelledby="pricing-heading">
+            <h2 id="pricing-heading">Scegli il piano che preferisci</h2>
             <div class="wrapper">
                 <div class="plan">
                     <div class="plan_cost">
@@ -326,56 +327,56 @@
         </section>
 
         <!-- FAQ section -->
-        <section id="FAQ">
-            <h2>FAQ</h2>
+        <section id="FAQ" aria-labelledby="FAQ-heading">
+            <h2 id="FAQ-heading">FAQ</h2>
             <p>Qualcosa non è chiaro? Non preoccuparti! Consulta le risposte alle domande più frequenti.</p>
             <div class="accordion-wrapper">
                 <div class="faq-item">
-                    <button class="faq-question">
+                    <button class="faq-question" aria-controls="faq1" id="question1">
                         <p>Posso utilizzare FocusFlow senza connessione internet?</p>
                         <span class="arrow">&#9660;</span>
                     </button>
-                    <p class="faq-answer">Sì, tutte le funzioni base sono utilizzabili anche offline.</p>
+                    <p class="faq-answer" id="faq1" aria-labelledby="question1" role="region">Sì, tutte le funzioni base sono utilizzabili anche offline.</p>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">
+                    <button class="faq-question" aria-controls="faq2" id="question2">
                         <p>Posso disdire l'abbonamento quando voglio?</p>
                         <span class="arrow">&#9660;</span>
                     </button>
-                    <p class="faq-answer">Certo, l'abboanamento è senza vincoli e puoi disdire in qualsiasi momento.</p>
+                    <p class="faq-answer" id="faq2" aria-labelledby="question2" role="region">Certo, l'abboanamento è senza vincoli e puoi disdire in qualsiasi momento.</p>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">
+                    <button class="faq-question" aria-controls="faq3" id="question3">
                         <p>È necessaria la carta di credito per il piano gratuito?</p>
                         <span class="arrow">&#9660;</span>
                     </button>
-                    <p class="faq-answer">No, il piano senza costi è gratuito al 100% e non richiede alcun metodo di
+                    <p class="faq-answer" id="faq3" aria-labelledby="question3" role="region">No, il piano senza costi è gratuito al 100% e non richiede alcun metodo di
                         pagamento.</p>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">
+                    <button class="faq-question" aria-controls="faq4" id="question4">
                         <p>È possibile passare da un piano all'altro?</p>
                         <span class="arrow">&#9660;</span>
                     </button>
-                    <p class="faq-answer">Certo, è possibile eseguire sia il downgrade che l'upgrade in qualsiasi
+                    <p class="faq-answer" id="faq4" aria-labelledby="question4" role="region">Certo, è possibile eseguire sia il downgrade che l'upgrade in qualsiasi
                         momento senza costi
                         aggiuntivi.</p>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">
+                    <button class="faq-question" aria-controls="faq5" id="question5">
                         <p>Cosa succede ai miei dati personali?</p>
                         <span class="arrow">&#9660;</span>
                     </button>
-                    <p class="faq-answer">FocusFlow utilizza crittografia end-to-end insieme ad alti standard di
+                    <p class="faq-answer" id="faq5" aria-labelledby="question5" role="region">FocusFlow utilizza crittografia end-to-end insieme ad alti standard di
                         sicurezza per garantire
                         l'integrità delle tue informazioni.</p>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">
+                    <button class="faq-question" aria-controls="faq6" id="question6">
                         <p>L'applicazione invia notifiche?</p>
                         <span class="arrow">&#9660;</span>
                     </button>
-                    <p class="faq-answer">FocusFlow, nella prima configurazione, chiederà, tramite il sistema operativo
+                    <p class="faq-answer" id="faq6" aria-labelledby="question6" role="region">FocusFlow, nella prima configurazione, chiederà, tramite il sistema operativo
                         dal quale lo si sta configurando, di accettare o meno la ricezione di notifiche riguardanti
                         report periodici, suggerimenti, tecniche di rilassmaento e nuovi approcci per il lavoro.</p>
                 </div>
@@ -383,9 +384,9 @@
         </section>
 
         <!-- Reinforcement CTA (Mobile only) -->
-        <section class="final-funnel">
+        <section class="final-funnel" role="">
             <h2>Inizia ora a gestire meglio il tuo tempo.</h2>
-            <a class="reinforcement cta" href="#pricing" title="Vai ai piani di acquisto">Ottieni FocusFlow</a>
+            <a aria-hidden="true" class="reinforcement cta" href="#pricing" title="Vai ai piani di acquisto">Ottieni FocusFlow</a>
         </section>
     </main>
     
@@ -402,15 +403,15 @@
                     alt="Logo applicazione" title="logo applicazione" />
                 <a href="index.html" title="Homepage"> FocusFlow </a>
             </div>
-            <ul class="footer-links">
-                <h4>Navigazione</h4>
+            <ul class="footer-links" aria-labelledby="navigation-title">
+                <h4 id="navigation-title">Navigazione</h4>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#features">Scopri</a></li>
                 <li><a href="#testimonials">Feedback</a></li>
                 <li><a href="#FAQ">FAQ</a></li>
             </ul>
-            <ul class="footer-links">
-                <h4>Informazioni</h4>
+            <ul class="footer-links" aria-labelledby="navigation-title">
+                <h4 id="navigation-title">Informazioni</h4>
                 <li><a href="#">Chi siamo</a></li>
                 <li><a href="#">Termini e Condizioni</a></li>
                 <li><a href="#">Privacy policy</a></li>
