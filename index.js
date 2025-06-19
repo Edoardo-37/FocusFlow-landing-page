@@ -9,6 +9,8 @@ const navLinks = document.querySelectorAll('.nav-links');
 
 hamburgerButton.addEventListener('click', function () {
     nav.classList.toggle('mobile');
+    const expanded = hamburgerButton.getAttribute('aria-expanded') === 'true'
+    hamburgerButton.setAttribute('aria-expanded', !expanded)
 })
 
 navLinks.forEach((link) => {
