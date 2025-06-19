@@ -664,8 +664,9 @@ footer>p {
     margin: 2rem 0 0 2rem;
 }
 
-.footer-links>h4 {
+.footer-links> li h4 {
     margin-block: 1rem;
+    color: var(--white);
     letter-spacing: 0.04rem;
 }
 
