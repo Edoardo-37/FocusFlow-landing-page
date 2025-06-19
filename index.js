@@ -2,6 +2,14 @@
 const navigationHeight = document.querySelector('nav').offsetHeight
 document.documentElement.style.setProperty('--navHeight', navigationHeight + 'px');
 
+// hamburger menu
+const nav = document.querySelector('nav');
+const hamburgerButton = document.querySelector('.hamburger-toggle');
+
+hamburgerButton.addEventListener('click', function(){
+    nav.classList.toggle('mobile');
+})
+
 // accordion opening
 const accordionButtons = document.querySelectorAll('.faq-question');
 const accordionContents = document.querySelectorAll('.faq-answer');
