@@ -5,9 +5,16 @@ document.documentElement.style.setProperty('--navHeight', navigationHeight + 'px
 // hamburger menu
 const nav = document.querySelector('nav');
 const hamburgerButton = document.querySelector('.hamburger-toggle');
+const navLinks = document.querySelectorAll('.nav-links');
 
-hamburgerButton.addEventListener('click', function(){
+hamburgerButton.addEventListener('click', function () {
     nav.classList.toggle('mobile');
+})
+
+navLinks.forEach((link) => {
+    link.addEventListener('click', function () {
+        nav.classList.remove('mobile');
+    })
 })
 
 // accordion opening
