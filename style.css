@@ -510,6 +510,10 @@ nav.mobile .hamburger-toggle span:nth-child(3) {
     margin: 1rem 0;
 }
 
+.plan_desc>ul>li img {
+    object-fit: contain;
+}
+
 .plan_desc .cta.purchase,
 .reinforcement.cta {
     background-color: var(--white);
