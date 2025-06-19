@@ -154,7 +154,7 @@ nav {
     width: 60px;
     height: 40px;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .logo>a {
@@ -628,7 +628,6 @@ nav.mobile .hamburger-toggle span:nth-child(3) {
 /* --- Footer illustration --- */
 .footer-illustration>img {
     aspect-ratio: 16 / 9;
-    transform: translateY(50px);
 }
 
 /* --- Footer  --- */
