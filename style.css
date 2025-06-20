@@ -169,7 +169,6 @@ nav {
     list-style: none;
     gap: 1.5rem;
     font-size: var(--body-text-size);
-    overflow: hidden;
 }
 
 nav.mobile .nav-links {
