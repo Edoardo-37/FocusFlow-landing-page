@@ -394,11 +394,9 @@ nav.mobile .hamburger-toggle span:nth-child(3) {
     gap: 2.5rem;
 }
 
-
 .quote-icon {
     font-size: 64px;
     height: fit-content;
-    text-align: center;
 }
 
 .testimonial-card {
@@ -417,7 +415,6 @@ nav.mobile .hamburger-toggle span:nth-child(3) {
 .testimonial-card span,
 .testimonial-card p {
     text-align: center;
-    margin-bottom: auto;
 }
 
 .testimonial-card img {
