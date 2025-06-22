@@ -61,6 +61,10 @@ h6 {
     line-height: 1.1;
 }
 
+h1{
+    font-size: var(--headings-text-size-lg);
+}
+
 h2 {
     font-size: var(--headings-text-size-md);
     margin-bottom: 2rem;
@@ -302,20 +306,34 @@ nav.mobile .hamburger-toggle span:nth-child(3) {
     gap: 1.5rem;
 }
 
+/* text reveal animation */
+.text-container h1, 
+.text-container > p,
+.text-container .cta.hero {
+    opacity: 0;
+}
+
+.text-container h1{
+    animation: fadeInTitle 1.5s ease-out forwards;
+}
+
+.text-container  p{
+    animation: fadeInText 1s ease-out forwards;
+    animation-delay: 2s;
+}
+
 .text-container h1,
 .text-container p,
 .text-container span {
     text-align: center;
 }
 
-.text-container h1 {
-    font-size: var(--headings-text-size-lg);
-}
-
 .text-container .cta.hero {
     background-color: var(--white);
     color: var(--textColor);
     border: 3px solid var(--white);
+    animation: fadeInTitle 1s ease-out forwards;
+    animation-delay: 4s;
 }
 
 .cta.hero:hover {
@@ -662,10 +680,13 @@ footer>p {
     margin: 2rem 0 0 2rem;
 }
 
-.footer-links> li h4 {
+.footer-links> li p {
+    font-family: var(--headings-font);
+    font-weight: bold;
+    font-size: 24px;
     margin-block: 1rem;
     color: var(--white);
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.10rem;
 }
 
 .footer-links>li>a {
@@ -752,5 +773,29 @@ footer>p {
 
     .plan:nth-child(1) {
         grid-column: 1 / span 2;
+    }
+}
+
+/* keyframes */
+
+@keyframes fadeInTitle {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
     }
 }
