@@ -25,4 +25,3 @@ This is a Landing page built only with **`HTML, CSS and JS`** about FocusFlow, a
 `JavaScript`
 - **Scroll-padding-top** property dynamically set by taking the exact `offsetHeight` of the navbar
 - **Accordion opening mechanism**: when clicking an item in the list, this will change color (by adding class `active`), the arrow will rotate (by adding the class `rotated`) and the content below will transite from height 0 to auto (by adding class `open`). If an item is already opened the other ones must be closed without any of those classes, otherwise the content will open.
-
